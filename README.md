@@ -1,6 +1,6 @@
 # simple-join-for-geoevent
 
-ArcGIS 10.3.x GeoEvent Extension sample Simple Join Processor for joining two GeoEvents together by a key field.
+ArcGIS GeoEvent Server Sample Simple Join Processor for joining two GeoEvents together by a key field.
 
 ![App](simple-join-for-geoevent.png?raw=true)
 
@@ -55,7 +55,3 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 A copy of the license is available in the repository's [license.txt](license.txt?raw=true) file.
-
-[](ArcGIS, GeoEvent, Processor)
-[](Esri Tags: ArcGIS GeoEvent Extension for Server)
-[](Esri Language: Java)
