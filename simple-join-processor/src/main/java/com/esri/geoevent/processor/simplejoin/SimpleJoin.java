@@ -51,7 +51,7 @@ public class SimpleJoin extends GeoEventProcessorBase implements GeoEventProduce
   private String                      geoEventDefinitionName;
 
   private final Map<String, GeoEvent> joinTrackCache = new ConcurrentHashMap<String, GeoEvent>();
-  private Map<String, String>         geDefMapper       = new ConcurrentHashMap<String, String>();
+  private Map<String, String>         geDefMapper    = new ConcurrentHashMap<String, String>();
   private ServiceTracker              geoEventDefinitionManagerTracker;
   private GeoEventDefinitionManager   geoEventDefinitionManager;
 
@@ -166,7 +166,10 @@ public class SimpleJoin extends GeoEventProcessorBase implements GeoEventProduce
         joinTrackCache.put(joinKeyFieldname, geoEvent);
       }
     }
-    else if (gedName.equals(sourceGeoEventDef)) // maybe we should allow any sources, but we have to deal with outgoing GeoEventDefinition names
+    else if (gedName.equals(sourceGeoEventDef)) // maybe we should allow any
+                                                // sources, but we have to deal
+                                                // with outgoing
+                                                // GeoEventDefinition names
     {
       String srcKeyFieldname = (String) geoEvent.getField(new FieldExpression(sourceKeyField)).getValue();
       GeoEvent joinGeoEvent = joinTrackCache.get(srcKeyFieldname);
